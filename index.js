@@ -42,7 +42,7 @@ class Airplane {
 */
 
 class Person {
-  
+  constructor(name, age)
 }
 
 /*
@@ -60,8 +60,24 @@ class Person {
 */
 
 class Car {
-  
+  constructor(model, milesPerGallon) {
+    this.tank = 0
+    this.model = model
+    this.milesPerGallon = milesPerGallon;
+  }
+
+  fill(gallons) {
+    this.tank += gallons
+  }
+
+  drive(dis) {
+    this.tank -= (distance / this.milesPerGallon)
+  }
 }
+
+// const honda = new Car("Honda", 30)
+// honda.fill(10)
+// honda.drive(1)
 
 /*
   TASK 3
@@ -76,8 +92,13 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-  
+    constructor(options) {
+      this.name = options.name
+      // this.… = options.…
+    }
 }
+
+const x = new Asian({name: "…"})
 
 /*
   TASK 4
@@ -93,8 +114,10 @@ class Lambdasian {
         + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
-class Instructor {
-
+class Instructor extends Asian {
+  constructor(thing1, thing2) {
+    super(thing1)
+  }
 }
 /*
   TASK 5
